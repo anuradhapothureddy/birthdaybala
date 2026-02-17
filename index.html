@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Bala 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      width: 440px;
+      padding: 30px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      animation: pop 1s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      color: #ff4b6e;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 26px;
+      color: #ff2f5b;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .special {
+      margin-top: 15px;
+      font-style: italic;
+      color: #ff4b6e;
+    }
+
+    .question {
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ff4b6e;
+    }
+
+    .buttons {
+      margin-top: 25px;
+      position: relative;
+      height: 90px;
+    }
+
+    button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .yes {
+      background: #ff4b6e;
+      color: white;
+      margin-right: 15px;
+    }
+
+    .yes:hover {
+      background: #ff2f5b;
+      transform: scale(1.1);
+    }
+
+    .no {
+      background: #eee;
+      color: #555;
+      position: absolute;
+    }
+
+    .message {
+      margin-top: 25px;
+      font-size: 17px;
+      color: #333;
+      display: none;
+    }
+
+    .heart {
+      font-size: 30px;
+      animation: float 2s infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>🎉 Happy Birthday 🎉</h1>
+    <div class="name">Bala 💕</div>
+
+    <p>
+      Today is special because **you** are special.  
+      The world feels warmer, kinder, and happier  
+      just because you exist ✨
+    </p>
+
+    <p class="special">
+      Some friendships are common…  
+      but ours?  
+      It’s something different, something rare,  
+      something that doesn’t need explanations 🌸
+    </p>
+
+    <p>
+      May your smile never fade,  
+      your dreams find you gently,  
+      and your heart always feel safe 💫
+    </p>
+
+    <div class="question">
+      Bala, will you be my friend forever? 💖
+    </div>
+
+    <div class="buttons">
+      <button class="yes" onclick="showLove()">Yes 💕</button>
+      <button class="no" onmouseover="moveButton()">No 🙃</button>
+    </div>
+
+    <div class="message" id="message">
+      <div class="heart">💗💗💗</div>
+      <p>
+        I knew it 😄  
+        Some people don’t come into our lives by chance…  
+        they come to stay.  
+        <br><br>
+        No matter what button you tried to press,  
+        the answer was always love 💖  
+        <br><br>
+        Happy Birthday, Bala 🎂✨
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showLove() {
+      document.getElementById("message").style.display = "block";
+    }
+
+    function moveButton() {
+      const noBtn = document.querySelector(".no");
+      const x = Math.random() * 260 - 120;
+      const y = Math.random() * 120 - 60;
+      const rotate = Math.random() * 360;
+
+      noBtn.style.transform = 
+        `translate(${x}px, ${y}px) rotate(${rotate}deg)`;
+    }
+  </script>
+
+</body>
+</html>
